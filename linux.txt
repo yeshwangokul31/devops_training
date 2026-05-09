@@ -1,0 +1,53 @@
+uptime - cmd is used to see when system is on
+we press double time d to delete entire line in vi 
+cd -   - cmd is used to go home
+cd ..  - is used to go back
+cp     - cmd is used to copy files
+cp -r  - cmd is used to copy one folder to another
+mv     - cmd is also used to rename the files
+> file.txt  - cmd is used to delete content of the file
+echo   - to print the sentence 
+env    - it is variable machine already have
+export - we can have created by our own used
+.bashrc  - is the startup file ( once we added here env cmd will be availble globally)
+env > abc.txt - to copy the env content in abc.txt  ( if we use >  it will delete all the old values and add new values but if we add >> if will 
+                append the values, it will append only the valid cmd, to add invalid cmd 2>> this cmd need to use)
+nohup &    -   cmd is used to ren application in background
+kill -9    -    cmd is used to force full stop the application running
+find . filename  - cmd is used to find the file or folder 
+find . filename -type f - cmd is used find file only
+xargs      - cmd used when multiline inputs were used
+find . -type f -exec grep 'unix' {} \;    - first search all files and then execute grep function to find unix word
+ctrl+Z    - to stop running code
+---------
+assignment - curl statuscode
+----------
+grep 'searchword' filename  - cmd used to find the word in file
+grep -c 'searchword' filename - cmd used to find the no. of line word used
+grep -n 'searchword' filename - list the no of lines
+grep -v 'searchword' filename - give the line without searchword.
+grep -w 'searchword' filename - it give only the match word not matches with part the word
+grep -w 'searchword' filename - prints only the match word not entire lines
+sed 's/linux/unix/g' dps.txt  - to replace word unix with linux  (confusion with replacing word)
+sed  -i 's/linux/unix/g' dps.txt - modify the file itself not only print
+sed '1,3 s/linux/unix/g' dps.txt - to replace the changes form line 1 to line 3
+sed '6,$ s/linux/unix/g' dps.txt - to replace the changes form line 6 to last line
+sed -n '5p' abc.txt - to print 5th line in the file
+sed '$d' dps.txt - to delete last line (d for delete)
+tr -s " " < dps.txt - cmd is ued top remove the extra spaces
+tr [a-z] [A-Z] < dps.txt - cmd is used to convert lower case to upper case
+sed -n '10p' abc.txt | cut -d '/' -f1     - cmd is usewd to spilit the word and select the necessary words
+uniq filename - print only unique sentence
+uniq -c filename - print no. of times repeated
+df -h | tee efg.txt    -   tee cmd is used to store data in the file
+du -sh | tee -a efg.txt  -  this cmd is used to store append in the file
+awk '/manager/ {print}' table  - to print entries having manager
+awk '/manager/ {print $3}' table - to print only 3 column
+awk '/manager/ {print $1,$3}' table  - to select only selected column
+awk '{print $NF}' table  - TO PRINT ONLY NUMERIC VALUE
+awk '$NF > 20000 {print}' table  - to filter above 20000
+----------------
+systemctl status nginx  - to see the status of nginix
+netstat -tunlp        - to see the port 
+
+						
