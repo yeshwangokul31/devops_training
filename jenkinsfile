@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                ls -lrt
             }
         }
         stage('Test') {
@@ -20,5 +19,3 @@ pipeline {
         }
     }
 }
-
-pipe
