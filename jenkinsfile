@@ -1,7 +1,23 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'REPO_NAME', defaultValue: 'devops_training', description: 'Repository name to display')
+    }
+
     stages {
+        stage('List Branches') {
+            steps {
+                echo "Repository: ${params.REPO_NAME}"
+                script {
+                    if (isUnix()) {
+                        sh 'git branch -a'
+                    } else {
+                        bat 'git branch -a'
+                    }
+                }
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
