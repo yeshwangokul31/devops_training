@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Cleanup') {
             steps {
-                echo 'Cleaning up...'
+                echo 'Cleaning up....'
             }
         }
     }
